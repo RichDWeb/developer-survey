@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Survey</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="mt-xl">
+            <h1 id="title">2022 Developer Survey</h1>
+            <p class="description" id="description">
+                Developer Survey is based off Stackoverflow's 2021 Developer Survey.
+                The 2021 Developer Survey has been as inspiration for the Freecodecamp challenge,<a target="_blank"
+                    href="https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form">
+                    build a survey form</a>.
+            </p>
+            <p class="description">The survey results can be found here: <a target="_blank"
+                    href="https://insights.stackoverflow.com/survey/2021">Stackoverflow Developer
+                    Survey</a></p>
+        </div>
+
+
+        <form action="#survey-action" id="survey-form" class="mt-xl">
+            <fieldset>
+                <legend>Developer Profile</legend>
+                <div class="border-bottom"></div>
+
+                <!-- Name -->
+                <div class="mt-xl">
+                    <h2>Name</h2>
+                    <label for="name" id="name-label" class="mt-s">What is your name</label>
+                    <input type="text" class="mt-xs" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <!-- Email -->
+                <div class="mt-xl">
+                    <h2>Email</h2>
+                    <label for="email" id="email-label" class="mt-s">What is yoor email address</label>
+                    <input type="email" id="email" class="mt-xs" placeholder="Enter your email" required>
+                </div>
+
+                <!-- Age -->
+                <div class="mt-xl">
+                    <h2>Age</h2>
+                    <label for="number" id="number-label" class="mt-s">What is your age?</label>
+                    <input type="number" id="number" class="mt-s" name="demographics" min="6" max="100"
+                        placeholder="Enter your age" required>
+                </div>
+
+                <!-- Territories -->
+                <fieldset>
+                    <legend>Key territories</legend>
+                    <div class="border-bottom"></div>
+                    <div class="mt-xl">
+                        <h2>Key territories</h2>
+                        <label for="dropdown" class="mt-s">Where do you live?</label>
+                        <select name="key-territories" id="dropdown" class="mt-xs">
+                            <option value="">Select a Country</option>
+                            <option value="united-states-of-america">United States of America</option>
+                            <option value="india">India</option>
+                            <option value="germany">Germany</option>
+                            <option value="United Kingdom of Great Britain and Northern Ireland">United Kingdom of Great
+                                Britain
+                                and
+                                Northern Ireland</option>
+                            <option value="Canada">Canada</option>
+                            <option value="France">France</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+
+                <fieldset>
+                    <!-- Experience -->
+                    <legend>Experience</legend>
+                    <div class="border-bottom"></div>
+
+                    <div class="mt-xl">
+                        <h2>Writing that first line of code</h2>
+                        <label for="experience" class="mt-s">At what age did you write your first line of code or
+                            program?
+                        </label>
+                        <input type="number" id="experience" class="mt-xs">
+                    </div>
+
+                    <div class="mt-xl">
+                        <h2>Learning how to code</h2>
+                        <p class="mt-s">How did you learn to code? Select all that
+                            apply.</p>
+                        <div class="mt-l">
+
+                            <div class="mt-s checkbox">
+                                <input type="checkbox" name="learning" value="other" class="mr" id="other">
+                                <label for="other">Other online resources (videos, blogs, etc)</label>
+                            </div>
+                            <div class="mt-s checkbox">
+                                <input type="checkbox" name="learning" value="school" class="mr" id="school">
+                                <label for="school">School</label>
+                            </div>
+                            <div class="mt-s checkbox">
+                                <input type="checkbox" name="learning" value="school" class="mr"
+                                    id="books-physical-media">
+                                <label for="books-physical-media">Books / Physical media</label>
+                            </div>
+                            <div class="mt-s checkbox">
+                                <input type="checkbox" name="learning" value="online-courses-or-certification"
+                                    class="mr" id="online-courses-or-certification">
+                                <label for="online-courses-or-certification">Online Courses or Certification</label>
+                            </div>
+                            <div class="mt-s checkbox">
+                                <input type="checkbox" name="learning" value="online-forum" class="mr"
+                                    id="online-forum">
+                                <label for="online-forum">Online Forum</label>
+                            </div>
+                            <div class="mt-s checkbox">
+                                <input type="checkbox" name="learning" value="friend-or-family-member" class="mr"
+                                    id="friend-or-family-member">
+                                <label for="friend-or-family-member">Friend or family member</label>
+                            </div>
+                            <div class="mt-s checkbox">
+                                <input type="checkbox" name="learning" value="colleague" class="mr" id="colleague">
+                                <label for="colleague">Colleague</label>
+                            </div>
+                            <div class="mt-s checkbox">
+                                <input type="checkbox" name="learning" value="coding-bootcamp" class="mr"
+                                    id="coding-bootcamp">
+                                <label for="coding-bootcamp">Coding Bootcamp</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-xl">
+                        <h2>Years coding</h2>
+                        <p>Including any education, how many years have you been coding in total?</p>
+
+                        <div class="mt-l checkbox">
+                            <input type="radio" name="years-coding" value="less-than-1-year" id="less-than-1-year"
+                                class="mr">
+                            <label for="less-than-1-year">Less than 1 year</label>
+                        </div>
+                        <div class="mt-s checkbox">
+                            <input type="radio" name="years-coding" value="1-to-4-years" id="1-to-4-years" class="mr">
+                            <label for="1-to-4-years">1 to 4 years</label>
+                        </div>
+                        <div class="mt-s checkbox">
+                            <input type="radio" name="years-coding" value="5-to-9-years" id="5-to-9-years" class="mr">
+                            <label for="5-to-9-years">5 to 9 years</label>
+                        </div>
+                        <div class="mt-s checkbox">
+                            <input type="radio" name="years-coding" value="10-to-14-years" id="10-to-14-years"
+                                class="mr">
+                            <label for="10-to-14-years">10 to 14 years</label>
+                        </div>
+                        <div class="mt-s checkbox">
+                            <input type="radio" name="years-coding" value="15-to-19-years" id="15-to-19-years"
+                                class="mr">
+                            <label for="15-to-19-years">15 to 19 years</label>
+                        </div>
+                        <div class="mt-s checkbox">
+                            <input type="radio" name="years-coding" value="20-to-24-years" id="20-to-24-years"
+                                class="mr">
+                            <label for="20-to-24-years">20 to 24 years</label>
+                        </div>
+                        <div class="mt-s checkbox">
+                            <input type="radio" name="years-coding" value="25-to-29-years" id="25-to-29-years"
+                                class="mr">
+                            <label for="25-to-29-years">25 to 29 years</label>
+                        </div>
+                        <div class="mt-s checkbox">
+                            <input type="radio" name="years-coding" value="30-to-34-years" id="30-to-34-years"
+                                class="mr">
+                            <label for="30-to-34-years">30 to 34 years</label>
+                        </div>
+                        <div class="mt-s checkbox">
+                            <input type="radio" name="years-coding" value="35-to-39-years" id="35-to-39-years"
+                                class="mr">
+                            <label for="35-to-39-years">35 to 39 years</label>
+                        </div>
+                        <div class="mt-s checkbox">
+                            <input type="radio" name="years-coding" value="40-to-44-years" id="40-to-44-years"
+                                class="mr">
+                            <label for="40-to-44-years">40 to 44 years</label>
+                        </div>
+                        <div class="mt-s checkbox">
+                            <input type="radio" name="years-coding" value="45-to-49-years" id="45-to-49-years"
+                                class="mr">
+                            <label for="45-to-49-years">45 to 49 years</label>
+                        </div>
+                        <div class="mt-s checkbox">
+                            <input type="radio" name="years-coding" value="more-than-50-years" id="more-than-50-years"
+                                class="mr">
+                            <label for="more-than-50-years">More than 50 years</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="mt-xl">
+                    <h2>Years coding professionally </h2>
+                    <p>NOT including education, how many years have you coded professionally (as a part of your work)?
+                    </p>
+                    <div class="mt-l checkbox">
+                        <input type="radio" name="years-coding-professionally" value="less-than-1-year-professionally"
+                            id="less-than-1-year-professionally" class="mr">
+                        <label for="less-than-1-year-professionally">Less than 1 year</label>
+                    </div>
+                    <div class="mt-s checkbox">
+                        <input type="radio" name="years-coding-professionally" value="1-to-4-years-professionally"
+                            id="1-to-4-years-professionally" class="mr">
+                        <label for="1-to-4-years-professionally">1 to 4 years</label>
+                    </div>
+                    <div class="mt-s checkbox">
+                        <input type="radio" name="years-coding-professionally" value="5-to-9-years-professionally"
+                            id="5-to-9-years-professionally" class="mr">
+                        <label for="5-to-9-years-professionally">5 to 9 years</label>
+                    </div>
+                    <div class="mt-s checkbox">
+                        <input type="radio" name="years-coding-professionally" value="10-to-14-years-professionally"
+                            id="10-to-14-years-professionally" class="mr">
+                        <label for="10-to-14-years-professionally">10 to 14 years</label>
+                    </div>
+                    <div class="mt-s checkbox">
+                        <input type="radio" name="years-coding-professionally" value="15-to-19-years-professionally"
+                            id="15-to-19-years-professionally" class="mr">
+                        <label for="15-to-19-years-professionally">15 to 19 years</label>
+                    </div>
+                    <div class="mt-s checkbox">
+                        <input type="radio" name="years-coding-professionally" value="20-to-24-years-professionally"
+                            id="20-to-24-years-professionally" class="mr">
+                        <label for="20-to-24-years-professionally">20 to 24 years</label>
+                    </div>
+                    <div class="mt-s checkbox">
+                        <input type="radio" name="years-coding-professionally" value="25-to-29-years-professionally"
+                            id="25-to-29-years-professionally" class="mr">
+                        <label for="25-to-29-years-professionally">25 to 29 years</label>
+                    </div>
+                    <div class="mt-s checkbox">
+                        <input type="radio" name="years-coding-professionally" value="30-to-34-years-professionally"
+                            id="30-to-34-years-professionally" class="mr">
+                        <label for="30-to-34-years-professionally">30 to 34 years</label>
+                    </div>
+                    <div class="mt-s checkbox">
+                        <input type="radio" name="years-coding-professionally" value="35-to-39-years-professionally"
+                            id="35-to-39-years-professionally" class="mr">
+                        <label for="35-to-39-years-professionally">35 to 39 years</label>
+                    </div>
+                    <div class="mt-s checkbox">
+                        <input type="radio" name="years-coding-professionally" value="40-to-44-years-professionally"
+                            id="40-to-44-years-professionally" class="mr">
+                        <label for="40-to-44-years-professionally">40 to 44 years</label>
+                    </div>
+                    <div class="mt-s checkbox">
+                        <input type="radio" name="years-coding-professionally" value="45-to-49-years-professionally"
+                            id="45-to-49-years-professionally" class="mr">
+                        <label for="45-to-49-years-professionally">45 to 49 years</label>
+                    </div>
+                    <div class="mt-s checkbox">
+                        <input type="radio" name="years-coding-professionally" value="more-than-50-years-professionally"
+                            id="more-than-50-years-professionally" class="mr">
+                        <label for="more-than-50-years-professionally">More than 50 years</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Developer Roles -->
+            <div class="mt-xl">
+                <h2>Developer Roles</h2>
+                <p class="mt-s">Which of the following describes your current job? Please select all that apply.</p>
+
+                <div class="mt-l">
+                    <div class="mt-s checkbox">
+                        <input type="checkbox" name="developer-type" value="full-stack" class="mr"
+                            id="developer-full-stack">
+                        <label for="developer-full-stack">Full-stack</label>
+                    </div>
+
+                    <div class="mt-s checkbox">
+                        <input type="checkbox" name="developer-type" value="back-end" class="mr"
+                            id="developer-back-end">
+                        <label for="developer-back-end">Back-end</label>
+                    </div>
+
+                    <div class="mt-s checkbox">
+                        <input type="checkbox" name="developer-type" value="front-end" class="mr">
+                        <label>Front-end</label>
+                    </div>
+
+                    <div class="mt-s checkbox">
+                        <input type="checkbox" name="developer-type" value="mobile" class="mr">
+                        <label>Mobile</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="mt-xl">
+                <h2>Education</h2>
+                <label class="mt-s" for="education">Which of the following best describes the highest level of formal
+                    education
+                    that
+                    you’ve completed?</label>
+                <select name="education" class="mt-xs">
+                    <option value="">Select Education</option>
+                    <option value="primary">Primary</option>
+                    <option value="secondary-school">Secondary school</option>
+                    <option value="associate-degree">Associate degree (A.A., A.S., etc.)</option>
+                    <option value="bachelors-degree">Bachelor’s degree</option>
+                    <option value="masters-degree">Master’s degree</option>
+                    <option value="doctoral-degree">Doctoral degree (Ph.D., Ed.D., etc.)</option>
+                </select>
+            </div>
+
+
+            <fieldset>
+                <legend>Demographics</legend>
+                <div class="border-bottom"></div>
+
+                <!-- Gender -->
+                <div class="mt-xl">
+                    <h2>Gender</h2>
+                    <label for="gender" class="mt-s">Which of the following describe you, if any? Please check all
+                        that
+                        apply.</label>
+                    <select name="gender" id="gender" class="mt-xs">
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="transgender">Transgender</option>
+                        <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+                </div>
+
+                <!-- Transgender  -->
+                <div class="mt-xl">
+                    <h2>Transgender</h2>
+                    <label for="orientation" class="mt-s">Do you identify as transgender?</label>
+                    <select name="orientation" id="orientation" class="mt-xs">
+                        <option value="straight">Straight / Heterosexual</option>
+                        <option value="bisexual">Bisexual</option>
+                        <option value="gay-or-lesbian">Gay or Lesbian</option>
+                        <option value="queer">Queer</option>
+                    </select>
+                </div>
+
+                <!-- Race and ethnicity -->
+                <div class="mt-xl">
+                    <h2>Race and ethnicity</h2>
+                    <p>Which of the following describe you, if any? Please check all
+                        that apply.</p>
+
+                    <div class="mt-l">
+                        <div class="mt-s checkbox">
+                            <input type="checkbox" name="race-ethicity" value="white-or-of-european-descent"
+                                id="white-or-of-european-descent" class="mr">
+                            <label for="white-or-of-european-descent">White or of European descent</label>
+                        </div>
+
+                        <div class="mt-s checkbox">
+                            <input type="checkbox" name="race-ethicity" value="south-asian" id="south-asian" class="mr">
+                            <label for="south-asian">South Asian</label>
+                        </div>
+
+                        <div class="mt-s checkbox">
+                            <input type="checkbox" name="race-ethicity" value="hispanic-or-latino"
+                                id="hispanic-or-latino" class="mr">
+                            <label for="hispanic-or-latino">Hispanic or Latino/a/x</label>
+                        </div>
+
+                        <div class="mt-s checkbox">
+                            <input type="checkbox" name="race-ethicity" value="middle-eastern" id="middle-eastern"
+                                class="mr">
+                            <label for="middle-eastern">Middle Eastern</label>
+                        </div>
+
+                        <div class="mt-s checkbox">
+                            <input type="checkbox" name="race-ethicity" value="southeast-asian" id="southeast-asian"
+                                class="mr">
+                            <label for="southeast-asian">Southeast Asian</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Feedback</legend>
+                <div class="border-bottom"></div>
+
+                <div class="mt-l">
+                    <h2>Any comments or suggestions?</h2>
+                    <label for="suggestions"></label>
+                    <textarea name="suggestions" id="suggestions" class="mt-l textarea"
+                        placeholder="Enter your comment here..."></textarea>
+                </div>
+            </fieldset>
+
+            </fieldset>
+
+
+            <input type="submit" value="submit" id="submit" class="my-m">
+        </form>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
